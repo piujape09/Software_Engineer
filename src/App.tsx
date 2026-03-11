@@ -8,7 +8,6 @@ import { Projects } from './components/Projects';
 import { Achievements } from './components/Achievements';
 import { Education } from './components/Education';
 import { Skills } from './components/Skills';
-import { AstronautCopilot } from './components/AstronautCopilot';
 import { Mail, MapPin, Phone, Github, Linkedin } from 'lucide-react';
 import { resumeData } from './data/resume';
 
@@ -56,7 +55,6 @@ export default function App() {
             </div>
             <Achievements />
             <Skills />
-            <AstronautCopilot />
 
             <footer id="contact" className="section-compact relative z-10 border-t border-white/[0.08]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
