@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --color-space-black: #05070a;
+  --color-cosmic-blue: #1e293b;
+  --color-accent: #6366f1;
+  --color-accent-violet: #8b5cf6;
+  --color-accent-cyan: #06b6d4;
+}
+
+@layer base {
+  body {
+    @apply bg-space-black text-slate-100 selection:bg-accent/40 selection:text-white;
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+  }
+}
+
+.glass-panel {
+  @apply bg-white/[0.03] backdrop-blur-lg border border-white/[0.08] rounded-xl transition-all duration-300;
+}
+
+.cosmic-glow {
+  box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.2);
+}
+
+.cosmic-glow-hover:hover {
+  box-shadow: 0 0 40px -5px rgba(6, 182, 212, 0.3);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.text-luminous {
+  @apply text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)];
+}
+
+.section-compact {
+  @apply py-20 px-6 max-w-5xl mx-auto;
+}
+
+.btn-glow {
+  @apply relative overflow-hidden bg-accent text-white font-medium rounded-lg px-6 py-3 transition-all duration-300;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-glow:hover {
+  @apply bg-accent-violet;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+  transform: translateY(-1px);
+}
